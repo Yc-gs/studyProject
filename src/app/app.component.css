@@ -41,9 +41,54 @@
 
 
 .logo {
-  width: 230px;
+  width: 260px;
   height: 31px;
   background: rgba(255, 255, 255, .2);
-  margin: 16px 28px 16px 0;
+  margin: 12px 0 16px 0;
   float: left;
+}
+
+.logo img {
+  width: 40px;
+  height: auto;
+  float: left;
+}
+
+.logo span {
+  font-size: 30px;
+  color: #aaa;
+  float: left;
+  margin: -11px 20px 0 20px;
+  line-height: 2;
+  vertical-align: middle;
+}
+.logo strong {
+  font-weight: bolder;
+  margin-left: 55px;
+  float: left;
+  font-size: xx-large;
+  line-height: 37px;
+  color: lightsteelblue;
+}
+.login {
+  height: 40px;
+  width: 140px;
+  line-height: 40px;
+  float: right;
+  margin-top: 12px;
+  padding: 0 10px;
+  padding-left: 11px;
+  border: 1px solid lightblue;
+  border-radius: 15px;
+}
+
+.login span {
+  color: lightseagreen;
+  font-weight: bold;
+  float: right;
+}
+
+:host ::ng-deep .ant-avatar {
+  margin-top: -6px;
+  margin-right: 12px;
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VipComponent } from './vip.component';
+import { ServiceComponent } from './service.component';
 
-describe('VipComponent', () => {
-  let component: VipComponent;
-  let fixture: ComponentFixture<VipComponent>;
+describe('ServiceComponent', () => {
+  let component: ServiceComponent;
+  let fixture: ComponentFixture<ServiceComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VipComponent ]
+      declarations: [ ServiceComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VipComponent);
+    fixture = TestBed.createComponent(ServiceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,58 @@
+<!--面包屑导航-->
+<nz-breadcrumb style="margin:16px 0;">
+  <nz-breadcrumb-item>前端</nz-breadcrumb-item>
+  <nz-breadcrumb-item>实战操作</nz-breadcrumb-item>
+  <nz-breadcrumb-item>Go</nz-breadcrumb-item>
+</nz-breadcrumb>
+<nz-layout style="padding:24px 0; background: #fff">
+  <nz-sider [nzWidth]="200" style="background:#fff">
+    <span style="padding-left: 20px; line-height: 28px;">改变目录风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="anticon anticon-arrow-right"></i></span>
+    <nz-switch [(ngModel)]="mode" style="min-width: 50px; float: right; margin-right: -56px;">
+    </nz-switch>
+    <nz-divider nzType="vertical"></nz-divider>
+    <ul nz-menu [nzMode]="mode?'vertical':'inline'" [nzTheme]="dark?'dark':'light'" style="width: 260px;">
+      <li nz-submenu>
+        <span title><i class="anticon anticon-mail"></i> Navigation One</span>
+        <ul>
+          <li nz-menu-group>
+            <span title>Item 1</span>
+            <ul>
+              <li nz-menu-item>Option 1</li>
+              <li nz-menu-item>Option 2</li>
+            </ul>
+          </li>
+          <li nz-menu-group>
+            <span title>Item 2</span>
+            <ul>
+              <li nz-menu-item>Option 3</li>
+              <li nz-menu-item>Option 4</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-appstore"></i> Navigation Two</span>
+        <ul>
+          <li nz-menu-item>Option 5</li>
+          <li nz-menu-item>Option 6</li>
+          <li nz-submenu>
+            <span title>Submenu</span>
+            <ul>
+              <li nz-menu-item>Option 7</li>
+              <li nz-menu-item>Option 8</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-setting"></i> Navigation Three</span>
+        <ul>
+          <li nz-menu-item>Option 9</li>
+          <li nz-menu-item>Option 10</li>
+          <li nz-menu-item>Option 11</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-content style="padding: 0 24px; margin-left: 37px; min-height: 280px;">Content</nz-content>
+</nz-layout>
