@@ -1,0 +1,192 @@
+<!--
+&lt;!&ndash;
+<button nz-button nzType="primary" nzGhost (click)="load()" [nzLoading]="isLoading"><i class="anticon anticon-poweroff"></i>关机</button>
+
+<br>
+<nz-dropdown>
+  <button nz-button nzType="default" nzGhost nzSize="large" nz-dropdown>Manager<i class="anticon anticon-down"></i></button>
+  <ul nz-menu>
+    <li nz-menu-item><a>2323</a></li>
+    <li nz-menu-item><a>2323</a></li>
+    <li nz-menu-item><a>2323</a></li>
+  </ul>
+</nz-dropdown>
+
+<br>
+<div nz-row>
+  <div nz-col class="gutter" nzSpan="6">1</div>
+  <div nz-col class="gutter" nzSpan="6">1</div>
+  <div nz-col class="gutter" nzSpan="6">1</div>
+  <div nz-col class="gutter" nzSpan="6">1</div>
+</div>
+
+&ndash;&gt;
+&lt;!&ndash;<app-layout></app-layout>&ndash;&gt;
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="triggerTemplate">
+    <div class="logo">
+      <img src="../assets/images/logo.jpg" alt=""><span>AI Engine</span>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">用户</span></span>
+        <ul>
+          <li nz-menu-item><a routerLinkActive="active" routerLink="/user/userlist">用户列表</a></li>
+          <li nz-menu-item><a routerLinkActive="active" routerLink="/user/vip">Vip</a></li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-team"></i><span class="nav-text">Team</span></span>
+        <ul>
+          <li nz-menu-item>Team 1</li>
+          <li nz-menu-item>Team 2</li>
+        </ul>
+      </li>
+      <li nz-menu-item><span><i class="anticon anticon-file"></i><span class="nav-text">File</span></span></li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+    </nz-header>
+    <nz-content style="margin:0 16px;">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>User</nz-breadcrumb-item>
+        <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div style="padding:24px; background: #fff; min-height: 360px; height: 9000px;">
+        <nz-affix nzOffsetBottom="120" (nzChange)="onChange($event)">
+          <button nz-button>
+            <span>120px to affix top</span>
+          </button>
+        </nz-affix>
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+  </nz-layout>
+</nz-layout>
+<ng-template #trigger>
+  <i class="anticon anticon-up"></i>
+</ng-template>
+
+-->
+
+<nz-layout class="layout" style="min-width: 1366px; margin: 0 auto">
+  <nz-header style="background: #ffffff;">
+    <div class="logo"></div>
+    <ul nz-menu [nzMode]="'horizontal'" style="line-height: 62px;">
+      <li nz-menu-item><i class="anticon anticon-mail"></i> Navigation One</li>
+      <li nz-menu-item nzDisabled><i class="anticon anticon-appstore"></i> Navigation Two</li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-setting"></i> Navigation Three - Submenu</span>
+        <ul>
+          <li nz-menu-group>
+            <span title>Item 1</span>
+            <ul>
+              <li nz-menu-item>Option 1</li>
+              <li nz-menu-item>Option 2</li>
+            </ul>
+          </li>
+          <li nz-menu-group>
+            <span title>Item 2</span>
+            <ul>
+              <li nz-menu-item>Option 3</li>
+              <li nz-menu-item>Option 4</li>
+              <li nz-submenu>
+                <span title>Sub Menu</span>
+                <ul>
+                  <li nz-menu-item nzDisabled>Option 5</li>
+                  <li nz-menu-item>Option 6</li>
+                </ul>
+              </li>
+              <li nz-submenu nzDisabled>
+                <span title>Disabled Sub Menu</span>
+                <ul>
+                  <li nz-menu-item>Option 5</li>
+                  <li nz-menu-item>Option 6</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li nz-menu-item>
+        <a href="https://ng.ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
+      </li>
+      <nz-dropdown style="float: right;">
+        <a nz-dropdown>
+          User <i class="anticon anticon-down"></i>
+        </a>
+        <ul nz-menu nzSelectable>
+          <li nz-menu-item>
+            <a>登陆</a>
+          </li>
+          <li nz-menu-item>
+            <a>注册</a>
+          </li>
+        </ul>
+      </nz-dropdown>
+    </ul>
+  </nz-header>
+  <nz-content style="padding:0 50px;">
+    <nz-breadcrumb style="margin:16px 0;">
+      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>List</nz-breadcrumb-item>
+      <nz-breadcrumb-item>App</nz-breadcrumb-item>
+    </nz-breadcrumb>
+    <nz-layout style="padding:24px 0; background: #fff">
+      <nz-sider [nzWidth]="200" style="background:#fff">
+        <span style="padding-left: 20px; line-height: 28px;">改变目录风格&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="anticon anticon-arrow-right"></i></span>
+        <nz-switch [(ngModel)]="mode" style="min-width: 50px; float: right; margin-right: -56px;">
+        </nz-switch>
+        <nz-divider nzType="vertical"></nz-divider>
+        <ul nz-menu [nzMode]="mode?'vertical':'inline'" [nzTheme]="dark?'dark':'light'" style="width: 260px;">
+          <li nz-submenu>
+            <span title><i class="anticon anticon-mail"></i> Navigation One</span>
+            <ul>
+              <li nz-menu-group>
+                <span title>Item 1</span>
+                <ul>
+                  <li nz-menu-item>Option 1</li>
+                  <li nz-menu-item>Option 2</li>
+                </ul>
+              </li>
+              <li nz-menu-group>
+                <span title>Item 2</span>
+                <ul>
+                  <li nz-menu-item>Option 3</li>
+                  <li nz-menu-item>Option 4</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title><i class="anticon anticon-appstore"></i> Navigation Two</span>
+            <ul>
+              <li nz-menu-item>Option 5</li>
+              <li nz-menu-item>Option 6</li>
+              <li nz-submenu>
+                <span title>Submenu</span>
+                <ul>
+                  <li nz-menu-item>Option 7</li>
+                  <li nz-menu-item>Option 8</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li nz-submenu>
+            <span title><i class="anticon anticon-setting"></i> Navigation Three</span>
+            <ul>
+              <li nz-menu-item>Option 9</li>
+              <li nz-menu-item>Option 10</li>
+              <li nz-menu-item>Option 11</li>
+            </ul>
+          </li>
+        </ul>
+      </nz-sider>
+      <nz-content style="padding: 0 24px; margin-left: 37px; min-height: 280px;">Content</nz-content>
+    </nz-layout>
+  </nz-content>
+  <nz-footer style="text-align: center;">Ant Design ©2017 Implement By Angular</nz-footer>
+</nz-layout>

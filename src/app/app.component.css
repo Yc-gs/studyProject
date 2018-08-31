@@ -1,0 +1,49 @@
+/*
+.gutter {
+  background: lightblue;
+  padding-left: 5px;
+  text-align: center;
+  line-height: 200px;
+}
+*/
+/*:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #1890ff;
+}
+
+:host ::ng-deep .logo {
+  height: 40px;
+  background: rgba(255, 255, 255, .2);
+  margin: 16px;
+  overflow: hidden;
+}
+
+:host ::ng-deep .logo img {
+  float: left;
+  width: 48px;
+  height: 40px;
+}
+:host ::ng-deep .logo span {
+  padding-left: 15px;
+  line-height: 40px;
+  color: lightgreen;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}*/
+
+
+.logo {
+  width: 230px;
+  height: 31px;
+  background: rgba(255, 255, 255, .2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
