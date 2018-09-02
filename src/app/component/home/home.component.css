@@ -1,0 +1,30 @@
+p {
+  margin: 0;
+}
+ul,li {
+  list-style-type: none;
+}
+.listShow {
+  padding-left: 0;
+}
+.listShow > li {
+  margin-bottom: 10px;
+}
+
+.listShow > li .left {
+  float: left;
+  width: 150px;
+  overflow: hidden;
+}
+
+.listShow > li .left img {
+  width: 100%;
+  height: 132px;
+  display: block;
+}
+
+.listShow > li .right {
+  margin-left: 220px;
+}
+
+

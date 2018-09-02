@@ -1,3 +1,32 @@
-<p>
-  home works!
-</p>
+
+
+
+
+<div nz-row style="margin-top: 10px" nzGutter="16">
+  <div nz-col nzSpan="16">
+    <nz-input-group nzSuffixIcon="anticon anticon-search" style="margin-bottom: 5px;">
+      <input type="text" nz-input placeholder="查找课程..." [(ngModel)]="searchContent">
+    </nz-input-group>
+    <ul class="listShow">
+      <li *ngFor="let item of showList | searchFilter:'title':searchContent">
+        <nz-card style="width:100%;" [nzTitle]="item.title" [nzExtra]="extraTemplate">
+          <div class="left">
+            <img [src]="item.imgUrl" alt="">
+          </div>
+          <div class="right" [innerHTML]="item.content">
+          </div>
+        </nz-card>
+        <ng-template #extraTemplate>
+          <a [routerLink]="item.link" routerLinkActive="active">Go To Study!</a>
+        </ng-template>
+      </li>
+      <nz-card style="width:100%;" [hidden]="noneHide">
+        <p>抱歉！没有找到匹配项...</p>
+      </nz-card>
+    </ul>
+  </div>
+  <div nz-col nzSpan="8">col-12</div>
+</div>
+
+
+

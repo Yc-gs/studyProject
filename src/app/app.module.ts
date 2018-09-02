@@ -20,6 +20,8 @@ import { PreAngularHistoryComponent } from './component/web/pre-angular/pre-angu
 import { PreAngularBaseComponent } from './component/web/pre-angular/pre-angular-base/pre-angular-base.component';
 import { DemoAngularPreComponent } from './component/web/demo-angular/demo-angular-pre/demo-angular-pre.component';
 import { DemoAngulaGoComponent } from './component/web/demo-angular/demo-angula-go/demo-angula-go.component';
+import { SearchFilterPipe } from './pipe/search-filter.pipe';
+import {GlobalService} from './service/global.service';
 
 registerLocaleData(zh);
 
@@ -34,7 +36,8 @@ registerLocaleData(zh);
     PreAngularHistoryComponent,
     PreAngularBaseComponent,
     DemoAngularPreComponent,
-    DemoAngulaGoComponent
+    DemoAngulaGoComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ registerLocaleData(zh);
     HttpClientModule,
     NgZorroAntdModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: zh_CN }],
+  providers: [{ provide: NZ_I18N, useValue: zh_CN }, GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

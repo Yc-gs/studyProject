@@ -14,6 +14,9 @@ export class AppComponent {
       this.isLoading = false;
     }, 3000);
   }*/
-  mode = false;
+  mode = true;
   dark = false;
+  user = {
+    username: '二狗子'
+  };
 }
